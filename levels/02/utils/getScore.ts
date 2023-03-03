@@ -5,7 +5,7 @@ export function getScore(pair: RPSPair) {
   return getWinLooseScore(pair) + abcMap[xyzToAbcMap[pair[1]]];
 }
 
-export function getWinLooseScore(pair: RPSPair) {
+function getWinLooseScore(pair: RPSPair) {
   const [opponentChoice, myChoice] = pair;
   const choicesDiff = abcMap[xyzToAbcMap[myChoice]] - abcMap[opponentChoice];
 

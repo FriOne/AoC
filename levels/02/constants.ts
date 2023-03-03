@@ -11,3 +11,15 @@ export const xyzToAbcMap: Record<SecondColumn, FirstColumn> = {
   Y: 'B',
   Z: 'C',
 };
+
+export const resultScore = {
+  X: 0, // Loose
+  Y: 3, // In draw
+  Z: 6, // Win
+};
+
+export const winCombinations: Record<FirstColumn, FirstColumn> = {
+  A: 'B',
+  B: 'C',
+  C: 'A',
+};

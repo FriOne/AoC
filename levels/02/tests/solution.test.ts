@@ -1,6 +1,6 @@
 import { join } from 'path';
 
-import { calcRPSTotal } from '../solution';
+import { calcRPSTotal, calcRPSTotalByResultStrategy } from '../solution';
 
 describe('Rock, Paper, Scissors game task: 02', () => {
   test('Score calculates correctly', async () => {
@@ -12,5 +12,9 @@ describe('Rock, Paper, Scissors game task: 02', () => {
     } catch (error) {
       expect((error as Error).message).toMatch('Wrong line format');
     }
+  });
+
+  test('Score by result calculates correctly', async () => {
+    expect(await calcRPSTotalByResultStrategy(join(__dirname, 'input.txt'))).toBe(11258);
   });
 });
